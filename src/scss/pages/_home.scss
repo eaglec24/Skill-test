@@ -1,0 +1,613 @@
+/*************************** start of  section hero ***************************/
+
+.hero {
+    position: relative;
+    height: calc(100vh - 86px);
+    position: relative;
+    background-image: url(../images/content/Hero-image.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @include breakpoint(xs) {
+        background-image: url(../images/content/Hero-image-mobile.svg);
+    }
+
+    @at-root #{&}__inner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        max-width: 1200px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+
+        @include breakpoint(xs) {
+            text-align: left;
+        }
+    }
+
+    @at-root #{&}__title {
+        font-weight: 600;
+        color: #fff;
+        font-size: 55px;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 5px;
+        text-transform: none;
+        @include fadeIn($duration: 1.5s, $count: 1, $delay: #{0/5}s, $function: ease, $fill: both);
+    }
+
+    @at-root #{&}__sub-title {
+        font-weight: normal;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        text-transform: none;
+        @include fadeIn($duration: 1.8s, $count: 1, $delay: #{0/5}s, $function: ease, $fill: both);
+
+        &:first-of-type {
+            margin-bottom: 60px;
+        }
+    }
+
+    @at-root #{&}__form {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        max-width: 461px;
+        margin-left: auto;
+        margin-right: auto;
+        @include fadeInUp($duration: 1.8s, $count: 1, $delay: #{0/5}s, $function: ease, $fill: both);
+
+        @include breakpoint(xs) {
+            display: none;
+        }
+
+    }
+
+    @at-root #{&}__input {
+        color: $dark-gray;
+        background-color: $white;
+        border: none;
+        border-radius: 30px;
+        padding: 0 20px;
+        min-height: 35px;
+        height: 60px;
+        line-height: normal;
+        width: 100%;
+        outline: none;
+    }
+
+    @at-root #{&}__mobile {
+        display: none;
+
+        @include breakpoint(xs) {
+            margin-top: 40px;
+            display: block;
+            @include fadeInUp($duration: 1.8s, $count: 1, $delay: #{0/5}s, $function: ease, $fill: both);
+
+        }
+    }
+}
+
+/*************************** end of  section hero ***************************/
+
+/*************************** start of  section compare  mattresses ***************************/
+
+.compare-mattresses {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @at-root #{&}__headline {
+        text-align: center;
+        margin-bottom: 106px;
+    }
+
+    @at-root #{&}__title {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 1.5;
+        color: $blue;
+        display: block;
+        letter-spacing: 2px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @at-root #{&}__content {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        overflow: hidden;
+    }
+
+    @at-root #{&}__item {
+        width: 48%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        @include breakpoint(xs) {
+            &:nth-of-type(2) {
+                img {
+                    width: 190%;
+                }
+
+                .compare-mattresses__pop {
+                    right: -50%;
+                }
+            }
+
+            &:nth-of-type(1) {
+                img {
+                    width: 190%;
+                    left: -70%;
+                }
+
+                .compare-mattresses__pop {
+                    left: 0%;
+                }
+            }
+
+        }
+
+        @at-root #{&}-title {
+            margin: 0;
+            margin-bottom: 20px;
+            text-transform: none;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1.5;
+            color: $blue;
+            display: block;
+            letter-spacing: 2px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    @at-root #{&}__item-desc {
+        color: $desc-color;
+        padding-bottom: 15px;
+        margin-bottom: auto;
+    }
+
+    @at-root #{&}__image-wrap {
+        position: relative;
+        margin-top: 65px;
+        min-height: 280px;
+    }
+
+    @at-root #{&}__image {
+        width: 100%;
+        left: 0;
+
+        @at-root #{&}--1st {
+            position: absolute;
+            bottom: 139px;
+            z-index: 99;
+            @include fadeIn($duration: 3.6s, $count: 1, $delay: #{0/5}s, $function: ease, $fill: both);
+        }
+
+        @at-root #{&}--2nd {
+            position: absolute;
+            bottom: 98px;
+            @include fadeIn($duration: 2.5s, $count: 1, $delay: #{3/5}s, $function: ease, $fill: both);
+            z-index: 98;
+        }
+
+        @at-root #{&}--3rd {
+            position: absolute;
+            bottom: 45px;
+            @include fadeIn($duration: 2s, $count: 1, $delay: #{4/5}s, $function: ease, $fill: both);
+            z-index: 11;
+        }
+
+        @at-root #{&}--4th {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    @at-root #{&}__pop {
+        width: 220px;
+        display: flex;
+        height: 37px;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 99999;
+        line-height: normal;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        overflow: visible;
+        -webkit-transition: all .4s ease-in;
+        transition: all .4s ease-in;
+
+        @at-root #{&}--1st {
+            top: -91px;
+
+            &:hover {
+                z-index: 9999999;
+
+                .compare-mattresses__lines-title {
+                    height: 238px;
+                    -webkit-transition: all 1.0s ease-in;
+                    transition: all 1.0s ease-in;
+                    background: $white;
+
+                    &::before {
+                        content: 'Exclusive to Lux';
+                        padding-top: 0px;
+                        height: 27px;
+                        width: 100%;
+                        display: block;
+                        background: #004991;
+                        color: #fff;
+                        border-radius: 6px;
+                        margin-bottom: 4px;
+                        @include fadeIn($duration: 2s, $count: 1, $delay: #{4/5}s, $function: ease, $fill: both);
+
+                    }
+                }
+            }
+        }
+
+        @at-root #{&}--2nd {
+            top: -6px;
+
+            &:hover {
+                z-index: 999999999;
+
+                .compare-mattresses__lines-title {
+
+                    height: 218px;
+                    -webkit-transition: all 1.0s ease-in;
+                    transition: height 1.0s ease-in;
+                    background: $white;
+                }
+            }
+
+        }
+
+        @at-root #{&}--3rd {
+            top: 98px;
+
+        }
+
+        @at-root #{&}--4th {
+            top: 198px;
+        }
+
+    }
+
+    @at-root #{&}__lines-title {
+        justify-content: space-around;
+        background: #eee;
+        border-radius: 9px;
+        padding: 3px;
+        width: 150px;
+        box-shadow: #eee 0 0px 3px;
+        -webkit-transition: all 1.0s ease-in;
+        transition: all 1.0s ease-in;
+        height: 27px;
+        cursor: pointer;
+        overflow: hidden;
+        color: $blue;
+
+        &::before {
+            -webkit-transition: all 1.4s ease-in;
+            transition: all 1.4s ease-in;
+
+        }
+    }
+
+    @at-root #{&}__hidden-content {
+        @include fadeIn($duration: 2s, $count: 1, $delay: #{4/5}s, $function: ease, $fill: both);
+        color: $dark-gray;
+        font-size: 13px;
+        line-height: 15px;
+        display: block;
+        clear: both;
+        margin-top: 11px;
+    }
+
+    @at-root #{&}__pulse {
+        display: block;
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        position: absolute;
+        top: 12px;
+        left: 5px;
+        /* transform: translateX(-50%); */
+        border-radius: 50%;
+
+        &:after {
+            content: "+";
+            position: absolute;
+            left: 1px;
+            height: 13px !important;
+            width: 13px !important;
+            border-radius: 50%;
+            /* transform: scale(1.2); */
+            animation: pulse 2s infinite;
+            z-index: 9999999999999;
+            box-shadow: 0 0 0 1px #234e89;
+            top: 1px;
+            color: #000;
+            font-size: 8px;
+            line-height: normal;
+        }
+    }
+}
+
+
+.finance-area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    max-width: 280px;
+    padding: 20px 0px;
+    display: flex;
+
+    @at-root #{&}__box {
+        width: 50%;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @at-root #{&}--separator {
+
+            &:before {
+                position: absolute;
+                width: 1px;
+                height: 134%;
+                background: #a5a4a4;
+                left: 0px;
+                top: -13px;
+                z-index: 1;
+                content: "";
+
+            }
+
+
+            &:after {
+                position: absolute;
+                width: 20px;
+                height: 21px;
+                background: #fff;
+                left: -10px;
+                top: 26px;
+                z-index: 2;
+                content: "or";
+                font-size: 12px;
+
+            }
+        }
+
+
+    }
+
+
+    @at-root #{&}__price {
+        color: $red;
+        font-weight: 700;
+        font-size: 25px;
+
+    }
+
+    @at-root #{&}__text {
+        color: $desc-color;
+        font-weight: normal;
+        font-size: 12px;
+
+        strong {
+            font-family: 'Poppins';
+            font-weight: bold;
+        }
+
+
+    }
+}
+
+
+/*************************** end of  section compare  mattresses ***************************/
+
+
+
+/*************************** start of  section stats ***************************/
+
+.stats {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @at-root #{&}__headline {
+        text-align: center;
+        margin-bottom: 106px;
+    }
+
+    @at-root #{&}__title {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 1.5;
+        color: $blue;
+        display: block;
+        letter-spacing: 2px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @at-root #{&}__content {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        overflow: hidden;
+
+        @include breakpoint(xs) {
+            width: 100%;
+            display: block;
+
+        }
+    }
+
+    @at-root #{&}__item {
+        width: 48%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint(xs) {
+            width: 100%;
+            display: block;
+            margin-bottom: 60px;
+        }
+    }
+
+    @at-root #{&}__text {
+        color: $desc-color;
+        font-weight: normal;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    @at-root #{&}__table {
+        width: 100%;
+        color: $blue;
+        font-weight: 600;
+        text-align: left;
+
+        td {
+            width: 52%;
+        }
+
+    }
+
+}
+
+/*************************** end of  section stats ***************************/
+
+
+/*************************** start of  section reasons ***************************/
+
+.reasons {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    @at-root #{&}__headline {
+        text-align: center;
+        margin-bottom: 106px;
+    }
+
+    @at-root #{&}__title {
+        font-weight: 600;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 1.5;
+        color: $blue;
+        display: block;
+        letter-spacing: 2px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    @at-root #{&}__content {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        overflow: hidden;
+
+        @include breakpoint(xs) {
+            width: 100%;
+            display: block;
+        }
+
+    }
+
+    @at-root #{&}__item {
+        width: 48%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        @include breakpoint(xs) {
+            width: 100%;
+            display: block;
+            margin-bottom: 60px;
+        }
+
+    }
+
+    @at-root #{&}__desc {
+        color: $desc-color;
+        font-weight: normal;
+
+        margin-top: 18px;
+    }
+
+
+    @at-root #{&}__sub-title {
+        margin-top: 48px;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: normal;
+        color: $desc-color;
+        display: block;
+        letter-spacing: 2px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+
+    }
+
+}
+
+/*************************** end of  section reasons ***************************/
